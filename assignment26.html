@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Box Model demonstration showing content, padding, border and margin.">
+    <meta name="author" content="Aastha Prajapati">
+
+    <title>Assignment 26 - CSS Box Model</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #263238;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        .demo-container {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .margin-box {
+            background-color: #fde68a;
+            border: 2px dashed #b45309;
+            padding: 25px;
+            margin: 30px 10px;
+        }
+
+        .border-box {
+            background-color: #86efac;
+            border: 6px solid #15803d;
+            padding: 25px;
+        }
+
+        .padding-box {
+            background-color: #bfdbfe;
+            padding: 25px;
+        }
+
+        .content-box {
+            background-color: white;
+            border: 1px solid #2563eb;
+            padding: 15px;
+        }
+
+        .content-box h2 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+
+        .legend {
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+
+        .legend h2 {
+            color: #1e3a8a;
+        }
+
+        .legend p {
+            line-height: 1.6;
+        }
+
+        .margin-label {
+            color: #92400e;
+            font-weight: bold;
+        }
+
+        .border-label {
+            color: #166534;
+            font-weight: bold;
+        }
+
+        .padding-label {
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Box Model</h1>
+        <p>Understanding the four parts of an HTML element</p>
+    </header>
+
+    <main class="demo-container">
+
+        <div class="margin-box">
+            <p class="margin-label">MARGIN — Space Outside the Border</p>
+
+            <div class="border-box">
+                <p class="border-label">BORDER — Edge Around the Element</p>
+
+                <div class="padding-box">
+                    <p class="padding-label">PADDING — Space Inside the Border</p>
+
+                    <div class="content-box">
+                        <h2>CONTENT</h2>
+                        <p>This is the actual content of the element.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="legend">
+            <h2>Box Model Explanation</h2>
+
+            <p>
+                <strong>1. Content:</strong>
+                The text, image or other information inside an element.
+            </p>
+
+            <p>
+                <strong>2. Padding:</strong>
+                The space between the content and the border.
+            </p>
+
+            <p>
+                <strong>3. Border:</strong>
+                The line surrounding the content and padding.
+            </p>
+
+            <p>
+                <strong>4. Margin:</strong>
+                The space outside the border that separates elements.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>HTML &amp; CSS Practical Assignment 26</p>
+    </footer>
+
+</body>
+</html>
+
+#proof:-
+<a href="box model proof.png">
+""
+

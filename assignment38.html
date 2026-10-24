@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard layout using named CSS Grid areas.">
+    <title>38 - Grid Dashboard</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e9ecf3;
+        }
+        .dashboard {
+            min-height: 100vh;
+            display: grid;
+            gap: 15px;
+            padding: 15px;
+            grid-template-columns: 200px repeat(3, minmax(0, 1fr));
+            grid-template-rows: 65px auto 1fr 45px;
+            grid-template-areas:
+                "header header header header"
+                "sidebar stat1 stat2 stat3"
+                "sidebar chart chart activity"
+                "footer footer footer footer";
+        }
+        .dashboard > * {
+            padding: 18px;
+            background: white;
+            border-radius: 10px;
+            min-width: 0;
+        }
+        .header {
+            grid-area: header;
+            background: #1f2a44;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar { grid-area: sidebar; background: #2b3a67; color: white; }
+        .sidebar ul { list-style: none; padding: 0; line-height: 2.5; }
+        .stat1 { grid-area: stat1; }
+        .stat2 { grid-area: stat2; }
+        .stat3 { grid-area: stat3; }
+        .stat strong { display: block; font-size: 26px; color: #2563eb; }
+        .chart { grid-area: chart; }
+        .activity { grid-area: activity; }
+        .bar {
+            background: #dbeafe;
+            margin: 12px 0;
+            padding: 10px;
+            border-left: 5px solid #2563eb;
+        }
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 12px;
+        }
+        @media (max-width: 750px) {
+            .dashboard {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header header"
+                    "sidebar sidebar"
+                    "stat1 stat2"
+                    "stat3 stat3"
+                    "chart chart"
+                    "activity activity"
+                    "footer footer";
+            }
+        }
+        @media (max-width: 450px) {
+            .dashboard { grid-template-columns: 1fr; }
+            .dashboard {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "stat1"
+                    "stat2"
+                    "stat3"
+                    "chart"
+                    "activity"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="dashboard">
+        <header class="header">
+            <h2>My Dashboard</h2>
+            <span>Admin</span>
+        </header>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li>Overview</li>
+                <li>Analytics</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <section class="stat stat1">
+            <p>Total Users</p>
+            <strong>1,250</strong>
+        </section>
+        <section class="stat stat2">
+            <p>Revenue</p>
+            <strong>₹24,500</strong>
+        </section>
+        <section class="stat stat3">
+            <p>Orders</p>
+            <strong>320</strong>
+        </section>
+
+        <section class="chart">
+            <h3>Weekly Overview</h3>
+            <div class="bar">Monday — 45%</div>
+            <div class="bar">Tuesday — 70%</div>
+            <div class="bar">Wednesday — 55%</div>
+            <div class="bar">Thursday — 85%</div>
+        </section>
+
+        <section class="activity">
+            <h3>Recent Activity</h3>
+            <p>New user registered</p>
+            <hr>
+            <p>New order received</p>
+            <hr>
+            <p>Report updated</p>
+        </section>
+
+        <footer class="footer">Dashboard Practice Project</footer>
+    </main>
+</body>
+</html>

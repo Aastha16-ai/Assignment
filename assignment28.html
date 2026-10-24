@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fixing CSS overflow and layout problems.">
+    <title>Assignment 28 - Fix Overflow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f4f6;
+            color: #222;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        main {
+            max-width: 900px;
+            width: 100%;
+            margin: 25px auto;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #2563eb;
+            border-radius: 10px;
+            width: 100%;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .long-text {
+            background-color: #dbeafe;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            min-width: 0;
+            background-color: #dcfce7;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Fixing CSS Overflow</h1>
+        <p>A layout that fits different screen sizes</p>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <h2>About Overflow</h2>
+            <p>
+                Overflow happens when content becomes larger than
+                the space available inside its container.
+            </p>
+
+            <div class="long-text">
+                ThisIsAVeryLongWordThatCouldBreakTheLayoutIfOverflowIsNotHandledProperly123456789
+            </div>
+        </section>
+
+        <section class="card-container">
+            <div class="card">
+                <h2>HTML</h2>
+                <p>HTML provides the structure of a webpage.</p>
+            </div>
+
+            <div class="card">
+                <h2>CSS</h2>
+                <p>CSS controls the appearance and layout.</p>
+            </div>
+
+            <div class="card">
+                <h2>Responsive Design</h2>
+                <p>The layout adjusts to different screen widths.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML &amp; CSS Practical Assignment 28</p>
+    </footer>
+
+</body>
+</html>

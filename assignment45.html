@@ -1,0 +1,249 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: #2563eb;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #334155;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 65px 0;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      color: #475569;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      margin-top: 12px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .hero-image {
+      min-height: 270px;
+      border-radius: 14px;
+      background: #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .features {
+      padding: 35px 0 65px;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 25px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      color: #2563eb;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 45px 20px;
+      background: #eff6ff;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      .hero {
+        gap: 25px;
+        padding: 45px 0;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 520px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 30px 0;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero-image {
+        min-height: 190px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <h2 class="logo">BrandName</h2>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="home">
+      <div>
+        <h1>Build Something Amazing</h1>
+        <p>
+          Turn your ideas into reality with simple,
+          useful and creative digital solutions.
+        </p>
+        <a class="btn" href="#features">Explore Features</a>
+      </div>
+
+      <div class="hero-image">
+        <p>Your Product or Image Goes Here</p>
+      </div>
+    </section>
+
+    <section class="features container" id="features">
+      <h2>Our Features</h2>
+
+      <div class="feature-grid">
+        <div class="card">
+          <h3>Easy to Use</h3>
+          <p>A simple design that is easy to understand.</p>
+        </div>
+
+        <div class="card">
+          <h3>Responsive</h3>
+          <p>Works across desktop, tablet and mobile screens.</p>
+        </div>
+
+        <div class="card">
+          <h3>Modern Design</h3>
+          <p>A clean layout with readable content.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="about">
+      <h2>Ready to Get Started?</h2>
+      <p>Explore our features and learn something new.</p>
+      <a class="btn" href="#contact">Contact Us</a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>Contact: hello@example.com</p>
+    <p>Copyright 2026 BrandName</p>
+  </footer>
+</body>
+</html>
+```

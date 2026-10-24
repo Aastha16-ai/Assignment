@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-page HTML project with Home, About, Registration and Contact sections.">
+    <meta name="author" content="Aastha Prajapati">
+
+    <title>Multi-Page Project - Home</title>
+
+    <style>
+        .page {
+            display: none;
+        }
+
+        .page:target,
+        body:not(:has(.page:target)) #home {
+            display: block;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aastha's Website</h1>
+
+        <nav aria-label="Main Navigation">
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#registration">Registration</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="page">
+            <h2>Home</h2>
+
+            <p>
+                Welcome to my website! This project demonstrates HTML
+                headings, lists, images, links, forms and tables.
+            </p>
+
+            <img
+                src="https://picsum.photos/id/1018/600/260"
+                alt="Mountain landscape"
+                width="600"
+                height="260"
+            >
+
+            <h3>What You Can Do Here</h3>
+
+            <ul>
+                <li><a href="#about">Learn about me</a></li>
+                <li><a href="#registration">Register for a workshop</a></li>
+                <li><a href="#contact">Send me a message</a></li>
+            </ul>
+        </section>
+
+        <section id="about" class="page">
+            <h2>About Me</h2>
+
+            <p>
+                I am a BCA Artificial Intelligence student learning
+                programming and web development.
+            </p>
+
+            <table border="1" cellpadding="6">
+                <caption>Quick Facts</caption>
+
+                <tr>
+                    <th scope="row">Course</th>
+                    <td>BCA Artificial Intelligence</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">University</th>
+                    <td>Invertis University</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Interests</th>
+                    <td>Java, HTML, CSS and Web Development</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="registration" class="page">
+            <h2>Workshop Registration</h2>
+
+            <form action="#" method="get">
+                <p>
+                    <label>
+                        Name:
+                        <input type="text" name="name" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Email:
+                        <input type="email" name="email" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Date of Birth:
+                        <input type="date" name="dob">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Level:
+                        <select name="level">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                        </select>
+                    </label>
+                </p>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="contact" class="page">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="get">
+                <p>
+                    <label>
+                        Your Name:
+                        <input type="text" name="name" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Your Email:
+                        <input type="email" name="email" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Message:
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                </p>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p>
+            <small>
+                &copy; 2026 Aastha Prajapati |
+                <a href="#home">Back to Home</a>
+            </small>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete responsive FitLife landing page using Flexbox.">
+    <title>FitLife - Flexbox Landing Page</title>
+    <style>
+        :root {
+            --green: #2d6a4f;
+            --light: #d8f3dc;
+            --dark: #1b4332;
+            --accent: #ff9f1c;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar { background: white; border-bottom: 1px solid #eee; }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .logo { color: var(--green); font-size: 25px; font-weight: bold; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a:hover { color: var(--green); }
+
+        .button {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .button:hover { background: var(--dark); }
+
+        .hero { background: var(--light); }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+
+        .hero-text { flex: 1 1 300px; }
+
+        .hero h1 {
+            color: var(--dark);
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero p { margin-bottom: 24px; color: #405348; }
+
+        .hero-art {
+            flex: 1 1 280px;
+            min-height: 240px;
+            border-radius: 18px;
+            background: #b7e4c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 95px;
+        }
+
+        section { padding: 55px 0; }
+
+        .section-title {
+            text-align: center;
+            color: var(--dark);
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature {
+            flex: 1 1 220px;
+            padding: 24px;
+            background: #f7faf7;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature .icon { font-size: 35px; }
+
+        .feature h3 { margin: 10px 0; color: var(--dark); }
+
+        .testimonials { background: #f4f7f4; }
+
+        .quotes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .quote {
+            flex: 1 1 250px;
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .quote p { margin-bottom: 12px; }
+
+        .quote strong { color: var(--green); }
+
+        .join {
+            text-align: center;
+            background: var(--green);
+            color: white;
+        }
+
+        .join h2 { font-size: 30px; margin-bottom: 12px; }
+
+        .join p { margin-bottom: 22px; }
+
+        .join .button { background: var(--accent); color: #222; }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 650px) {
+            .nav-content { flex-direction: column; }
+
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 45px;
+                padding-bottom: 45px;
+            }
+
+            .hero-art { width: 100%; min-height: 190px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <nav class="container nav-content" aria-label="Main navigation">
+            <a href="#home" class="logo">FitLife</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a class="button" href="#join">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Make Healthy Living a Habit</h1>
+                    <p>
+                        Build a healthier routine with simple workouts,
+                        helpful guidance and a supportive community.
+                        Start with small steps and keep moving forward.
+                    </p>
+                    <a class="button" href="#join">Get Started</a>
+                </div>
+
+                <div class="hero-art" role="img" aria-label="Person exercising">
+                    🏃
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose FitLife?</h2>
+
+                <div class="features">
+                    <article class="feature">
+                        <div class="icon">🏋️</div>
+                        <h3>Simple Workouts</h3>
+                        <p>Explore activities that fit into your daily routine.</p>
+                    </article>
+
+                    <article class="feature">
+                        <div class="icon">🥗</div>
+                        <h3>Healthy Habits</h3>
+                        <p>Learn practical ways to take care of your wellbeing.</p>
+                    </article>
+
+                    <article class="feature">
+                        <div class="icon">🤝</div>
+                        <h3>Community</h3>
+                        <p>Find encouragement while working towards your goals.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="reviews">
+            <div class="container">
+                <h2 class="section-title">What People Say</h2>
+
+                <div class="quotes">
+                    <article class="quote">
+                        <p>"The simple routine helps me stay organised."</p>
+                        <strong>— Aanya</strong>
+                    </article>
+
+                    <article class="quote">
+                        <p>"I enjoy having everything in one easy place."</p>
+                        <strong>— Rohan</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="join" id="join">
+            <div class="container">
+                <h2>Start Your Journey Today</h2>
+                <p>Take the first step towards building a healthier routine.</p>
+                <a href="#home" class="button">Explore FitLife</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FitLife. HTML &amp; CSS Practice Project.</p>
+    </footer>
+
+</body>
+</html>

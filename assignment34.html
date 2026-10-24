@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive navigation bar and hero section using Flexbox.">
+    <title>Navbar and Hero - Flexbox</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #1b263b;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 7%;
+            background: white;
+            box-shadow: 0 2px 8px #0001;
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: #0077b6; }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .links .cta {
+            background: #0077b6;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 7%;
+            background: #edf7fc;
+            min-height: 440px;
+        }
+
+        .hero-content { flex: 1 1 300px; }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 50px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #526174;
+            margin-bottom: 24px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #0077b6;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .hero-visual {
+            flex: 1 1 260px;
+            min-height: 250px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #90e0ef, #caf0f8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 45px 7%;
+                text-align: center;
+            }
+
+            .hero-visual { min-height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BrightWeb</div>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a class="cta" href="#contact">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Build Something Amazing</h1>
+                <p>
+                    Turn your ideas into useful digital experiences.
+                    Start learning, creating and growing with us.
+                </p>
+                <a class="hero-button" href="#about">Explore More</a>
+            </div>
+
+            <div class="hero-visual" role="img" aria-label="Laptop illustration">
+                💻
+            </div>
+        </section>
+
+        <section id="about" style="padding: 35px 7%; text-align: center;">
+            <h2>About Us</h2>
+            <p>We create simple and helpful digital experiences.</p>
+        </section>
+    </main>
+</body>
+</html>

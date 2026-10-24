@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile card and product card components.">
+    <title>Assignment 30 - Profile and Product Cards</title>
+
+    <style>
+        :root {
+            --primary: #5b4bdb;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #eef0f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 16px;
+        }
+
+        /* PROFILE CARD */
+
+        .profile {
+            width: 300px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .profile-cover {
+            height: 100px;
+            background: linear-gradient(120deg, var(--primary), #00b4d8);
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: -50px;
+            object-fit: cover;
+        }
+
+        .profile-body {
+            padding: 0 24px 24px;
+        }
+
+        .profile h2 {
+            margin: 8px 0 0;
+        }
+
+        .profile p {
+            color: #666;
+            margin: 5px 0 16px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+            padding-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .stats strong {
+            display: block;
+            font-size: 19px;
+        }
+
+        .stats span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #3f31b0;
+        }
+
+        /* PRODUCT CARD */
+
+        .product {
+            width: 300px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #e63946;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 999px;
+        }
+
+        .product-body {
+            padding: 20px;
+        }
+
+        .product h2 {
+            margin: 0 0 5px;
+            font-size: 20px;
+        }
+
+        .rating {
+            color: #f4a100;
+            font-size: 14px;
+        }
+
+        .price {
+            margin: 12px 0;
+        }
+
+        .price strong {
+            font-size: 24px;
+        }
+
+        .price s {
+            color: #999;
+            margin-left: 8px;
+        }
+
+        .product .btn {
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PROFILE CARD -->
+
+    <article class="profile">
+        <div class="profile-cover"></div>
+
+        <img
+            class="profile-avatar"
+            src="https://picsum.photos/id/1005/200/200"
+            alt="Profile portrait"
+        >
+
+        <div class="profile-body">
+            <h2>Aarav Sharma</h2>
+            <p>Front-End Developer · Meerut</p>
+
+            <div class="stats">
+                <div>
+                    <strong>45</strong>
+                    <span>Projects</span>
+                </div>
+
+                <div>
+                    <strong>1.2k</strong>
+                    <span>Followers</span>
+                </div>
+
+                <div>
+                    <strong>320</strong>
+                    <span>Commits</span>
+                </div>
+            </div>
+
+            <a class="btn" href="#profile">Follow</a>
+        </div>
+    </article>
+
+    <!-- PRODUCT CARD -->
+
+    <article class="product">
+        <span class="product-tag">-30%</span>
+
+        <img
+            src="https://picsum.photos/id/21/600/400"
+            alt="Product displayed on a desk"
+        >
+
+        <div class="product-body">
+            <h2>Wireless Headphones</h2>
+
+            <div class="rating" aria-label="4 out of 5 stars">
+                ★★★★☆ <small>(214 reviews)</small>
+            </div>
+
+            <div class="price">
+                <strong>₹2,799</strong>
+                <s>₹3,999</s>
+            </div>
+
+            <a class="btn" href="#cart">Add to Cart</a>
+        </div>
+    </article>
+
+</body>
+</html>

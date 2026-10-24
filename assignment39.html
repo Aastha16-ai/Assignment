@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive store layout using CSS Grid.">
+    <title>39 - Store Grid Layout</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f7fb;
+        }
+        .page {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+        header {
+            grid-area: header;
+            background: #14213d;
+            color: white;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        header input {
+            padding: 10px;
+            border: 0;
+            border-radius: 6px;
+            max-width: 260px;
+            width: 100%;
+        }
+        aside {
+            grid-area: sidebar;
+            background: white;
+            padding: 22px;
+            border-right: 1px solid #ddd;
+        }
+        aside h2 { font-size: 18px; margin-top: 0; }
+        aside ul { list-style: none; padding: 0; line-height: 2.4; }
+        main { grid-area: main; padding: 24px; min-width: 0; }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+        .product {
+            background: white;
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .product img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+        .product h3 { font-size: 17px; }
+        .price { color: #087f5b; font-weight: bold; }
+        .footer {
+            grid-area: footer;
+            background: #14213d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        @media (max-width: 650px) {
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+            header { flex-wrap: wrap; }
+            aside { border-right: 0; border-bottom: 1px solid #ddd; }
+            aside ul { display: flex; flex-wrap: wrap; gap: 15px; }
+            main { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>My Store</h1>
+            <input type="search" placeholder="Search products..." aria-label="Search products">
+        </header>
+
+        <aside>
+            <h2>Categories</h2>
+            <ul>
+                <li>All Products</li>
+                <li>Electronics</li>
+                <li>Clothing</li>
+                <li>Home</li>
+                <li>Accessories</li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Featured Products</h2>
+            <div class="products">
+                <article class="product">
+                    <img src="https://picsum.photos/id/1/400/300" alt="Laptop on a desk">
+                    <h3>Laptop</h3>
+                    <p class="price">₹45,999</p>
+                </article>
+                <article class="product">
+                    <img src="https://picsum.photos/id/250/400/300" alt="Watch">
+                    <h3>Watch</h3>
+                    <p class="price">₹1,499</p>
+                </article>
+                <article class="product">
+                    <img src="https://picsum.photos/id/21/400/300" alt="Desk accessories">
+                    <h3>Desk Accessories</h3>
+                    <p class="price">₹899</p>
+                </article>
+                <article class="product">
+                    <img src="https://picsum.photos/id/96/400/300" alt="Coffee mug">
+                    <h3>Coffee Mug</h3>
+                    <p class="price">₹299</p>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">My Store · HTML &amp; CSS Practice</footer>
+    </div>
+</body>
+</html>

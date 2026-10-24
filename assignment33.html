@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive product listing using Flexbox and flex-wrap.">
+    <title>Product Listing - Flex Wrap</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f8;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        header h1 { margin: 0; }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product {
+            flex: 1 1 240px;
+            max-width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 3px 10px #0001;
+        }
+
+        .product-image {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #dbeafe;
+            font-size: 60px;
+        }
+
+        .product-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product h2 { font-size: 19px; margin: 0 0 8px; }
+
+        .product p {
+            color: #666;
+            line-height: 1.5;
+            margin: 0 0 15px;
+        }
+
+        .product-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price { font-weight: bold; color: #1d4ed8; }
+
+        .product a {
+            background: #2563eb;
+            color: white;
+            padding: 9px 12px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .product a:hover { background: #1e40af; }
+
+        @media (max-width: 500px) {
+            header { text-align: center; }
+            .products { padding: 15px; }
+            .product { max-width: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Store</h1>
+        <p>Explore our featured products</p>
+    </header>
+
+    <main class="products">
+        <article class="product">
+            <div class="product-image" role="img" aria-label="Headphones">🎧</div>
+            <div class="product-body">
+                <h2>Wireless Headphones</h2>
+                <p>Comfortable headphones for music, study and travel.</p>
+                <div class="product-footer">
+                    <span class="price">₹1,499</span>
+                    <a href="#headphones">View Product</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product">
+            <div class="product-image" role="img" aria-label="Smart watch">⌚</div>
+            <div class="product-body">
+                <h2>Smart Watch</h2>
+                <p>Track your daily activities with a simple smart watch.</p>
+                <div class="product-footer">
+                    <span class="price">₹2,299</span>
+                    <a href="#watch">View Product</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product">
+            <div class="product-image" role="img" aria-label="Backpack">🎒</div>
+            <div class="product-body">
+                <h2>Everyday Backpack</h2>
+                <p>A useful bag for college, books and daily essentials.</p>
+                <div class="product-footer">
+                    <span class="price">₹999</span>
+                    <a href="#backpack">View Product</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="product">
+            <div class="product-image" role="img" aria-label="Camera">📷</div>
+            <div class="product-body">
+                <h2>Digital Camera</h2>
+                <p>Capture your favourite moments and memories.</p>
+                <div class="product-footer">
+                    <span class="price">₹5,499</span>
+                    <a href="#camera">View Product</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

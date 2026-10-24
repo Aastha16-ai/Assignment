@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Three differently styled cards using CSS border-radius and backgrounds.">
+    <title>Assignment 27 - Card Variants</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 30px 20px;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 250px;
+            padding: 22px;
+            box-sizing: border-box;
+        }
+
+        /* Card 1 */
+        .card-one {
+            background-color: white;
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        /* Card 2 */
+        .card-two {
+            background-color: #dbeafe;
+            border: 2px solid #60a5fa;
+            border-radius: 20px;
+        }
+
+        /* Card 3 */
+        .card-three {
+            background-color: #dcfce7;
+            border: 2px solid #16a34a;
+            border-radius: 35px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Three Different Card Designs</h1>
+    <p style="text-align: center;">
+        Demonstration of CSS border-radius and background colors
+    </p>
+
+    <main class="card-container">
+
+        <section class="card card-one">
+            <h2>Simple Card</h2>
+            <p>This card has a white background and slightly rounded corners.</p>
+            <p><strong>Border Radius:</strong> 8px</p>
+        </section>
+
+        <section class="card card-two">
+            <h2>Rounded Card</h2>
+            <p>This card has a light blue background and more rounded corners.</p>
+            <p><strong>Border Radius:</strong> 20px</p>
+        </section>
+
+        <section class="card card-three">
+            <h2>Soft Card</h2>
+            <p>This card has a light green background and very rounded corners.</p>
+            <p><strong>Border Radius:</strong> 35px</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>HTML &amp; CSS Practical Assignment 27</p>
+    </footer>
+
+</body>
+</html>

@@ -16,4 +16,4 @@ Live Server is a VS Code extension that runs an HTML page on a local development
 I will verify that VS Code is installed, Node.js is working, and Live Server runs my HTML page successfully.
 
 Proof:-
-<img src="live_server.png" >
+<img src="live_server.png">
